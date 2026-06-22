@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.GestaoAcademica2" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#7986CB</item>
+        <item name="colorOnPrimary">#1A237E</item>
+        <item name="colorPrimaryContainer">#283593</item>
+        <item name="colorOnPrimaryContainer">#C5CAE9</item>
+        <item name="colorSecondary">#80CBC4</item>
+        <item name="colorOnSecondary">#004D40</item>
+        <item name="colorSecondaryContainer">#004D40</item>
+        <item name="colorSurface">#1E1F2E</item>
+        <item name="colorSurfaceVariant">#2C2D3F</item>
+        <item name="colorOnSurface">#E6E1EC</item>
+        <item name="colorOnSurfaceVariant">#CAC4D0</item>
+        <item name="android:colorBackground">#12131E</item>
+        <item name="android:statusBarColor" tools:targetApi="21">#12131E</item>
+    </style>
+
+    <style name="Theme.GestaoAcademica2" parent="Base.Theme.GestaoAcademica2" />
+
+</resources>

@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Gestão Acadêmica</string>
+
+    <!-- Home -->
+    <string name="title_home">Agenda Acadêmica</string>
+    <string name="filter_all">Todos</string>
+    <string name="filter_favorites">Favoritos</string>
+    <string name="hint_search">Buscar eventos…</string>
+    <string name="empty_title">Nenhum evento encontrado</string>
+    <string name="empty_subtitle">Toque em + para adicionar um novo evento</string>
+
+    <!-- Add / Edit -->
+    <string name="title_new_event">Novo Evento</string>
+    <string name="title_edit_event">Editar Evento</string>
+    <string name="label_title">Título *</string>
+    <string name="label_subject">Disciplina</string>
+    <string name="label_category">Categoria *</string>
+    <string name="label_priority">Prioridade</string>
+    <string name="label_date">Data do Evento *</string>
+    <string name="label_location">Local (opcional)</string>
+    <string name="label_description">Descrição (opcional)</string>
+    <string name="btn_save">Salvar Evento</string>
+    <string name="btn_select_date">Selecionar Data</string>
+    <string name="error_title_empty">Informe o título do evento</string>
+    <string name="error_category_empty">Selecione uma categoria</string>
+    <string name="error_date_empty">Selecione a data do evento</string>
+
+    <!-- Detail -->
+    <string name="title_detail">Detalhes</string>
+    <string name="action_edit">Editar</string>
+    <string name="action_delete">Excluir</string>
+    <string name="btn_favorite_add">Adicionar aos favoritos</string>
+    <string name="btn_favorite_remove">Remover dos favoritos</string>
+    <string name="btn_complete">Marcar como concluído</string>
+    <string name="btn_uncomplete">Desmarcar conclusão</string>
+    <string name="badge_completed">Concluído</string>
+    <string name="confirm_delete">Excluir este evento?</string>
+    <string name="confirm_delete_msg">Esta ação não pode ser desfeita.</string>
+    <string name="btn_confirm">Excluir</string>
+    <string name="btn_cancel">Cancelar</string>
+
+    <!-- Labels detail -->
+    <string name="label_detail_date">Data</string>
+    <string name="label_detail_category">Categoria</string>
+    <string name="label_detail_priority">Prioridade</string>
+    <string name="label_detail_subject">Disciplina</string>
+    <string name="label_detail_location">Local</string>
+    <string name="label_detail_description">Descrição</string>
+    <string name="no_info">Não informado</string>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary — Indigo acadêmico -->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#1A237E</color>
+    <color name="colorPrimaryLight">#7986CB</color>
+    <color name="colorPrimaryContainer">#E8EAF6</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnPrimaryContainer">#1A237E</color>
+
+    <!-- Secondary — Teal -->
+    <color name="colorSecondary">#26A69A</color>
+    <color name="colorSecondaryContainer">#E0F2F1</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+
+    <!-- Superfícies -->
+    <color name="colorBackground">#F5F6FD</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorSurfaceVariant">#ECEEF8</color>
+    <color name="colorOnBackground">#1C1B2E</color>
+    <color name="colorOnSurface">#1C1B2E</color>
+    <color name="colorOnSurfaceVariant">#5C5F7A</color>
+    <color name="colorError">#B00020</color>
+
+    <!-- Status -->
+    <color name="status_green">#2E7D32</color>
+    <color name="status_amber">#F57F17</color>
+    <color name="status_red">#C62828</color>
+    <color name="amber">#FFA000</color>
+    <color name="amber_light">#FFF8E1</color>
+
+    <!-- Prioridade -->
+    <color name="priority_high">#D32F2F</color>
+    <color name="priority_high_container">#FFCDD2</color>
+    <color name="priority_medium">#F57F17</color>
+    <color name="priority_medium_container">#FFF3E0</color>
+    <color name="priority_low">#2E7D32</color>
+    <color name="priority_low_container">#E8F5E9</color>
+
+    <!-- Categorias -->
+    <color name="cat_prova">#C62828</color>
+    <color name="cat_prova_container">#FFCDD2</color>
+    <color name="cat_trabalho">#1565C0</color>
+    <color name="cat_trabalho_container">#BBDEFB</color>
+    <color name="cat_palestra">#6A1B9A</color>
+    <color name="cat_palestra_container">#E1BEE7</color>
+    <color name="cat_aula">#00695C</color>
+    <color name="cat_aula_container">#B2DFDB</color>
+    <color name="cat_outro">#455A64</color>
+    <color name="cat_outro_container">#ECEFF1</color>
+
+    <!-- White / Black -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+</resources>
