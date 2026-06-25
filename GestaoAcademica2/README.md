@@ -4,12 +4,6 @@ Aplicativo Android desenvolvido em **Kotlin** para organização da rotina estud
 
 ---
 
-## Interface
-
-> <img width="1080" height="2400" alt="WhatsApp Image 2026-06-23 at 11 21 00 (1)" src="https://github.com/user-attachments/assets/1be66771-f393-4f03-b496-151ae53b4736" />
-
----
-
 ## Funcionalidades
 
 - Listagem dinâmica de compromissos acadêmicos (provas, trabalhos, palestras)
