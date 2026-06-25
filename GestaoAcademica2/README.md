@@ -4,6 +4,9 @@ Aplicativo Android desenvolvido em **Kotlin** para organização da rotina estud
 
 ---
 
+<img width="299" height="652" alt="image" src="https://github.com/user-attachments/assets/d324ab75-28fe-4928-89c7-eff858fc4bdd" />
+
+
 ## Funcionalidades
 
 - Listagem dinâmica de compromissos acadêmicos (provas, trabalhos, palestras)
