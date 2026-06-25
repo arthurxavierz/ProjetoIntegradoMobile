@@ -51,7 +51,7 @@ Diário de estudos com agendamento de revisões e disparos de notificações loc
 
 ## Protótipos no Figma
 
-> *(Inserir links dos protótipos do Figma de cada aplicativo aqui)*
+> *https://www.figma.com/design/g2oDSN9Wj5GkqNC1QOk7Ik/Projeto-Integrado-Mobile?node-id=0-1&t=Zstzhkuhsarl51pc-1*
 
 ---
 
