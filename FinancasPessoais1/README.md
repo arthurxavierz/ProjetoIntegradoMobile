@@ -4,12 +4,6 @@ Aplicativo Android desenvolvido em **Kotlin com Jetpack Compose** para controle 
 
 ---
 
-## Interface
-
-<img width="273" height="606" alt="image" src="https://github.com/user-attachments/assets/f9721569-a01b-4755-bb3d-dac99f14695c" />
-
----
-
 ## Funcionalidades
 
 - **Cadastro de despesas** com nome, valor, categoria e data (validação de campos)
