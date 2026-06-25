@@ -1,26 +1,36 @@
 package com.example.financaspessoais1.model
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.Celebration
-import androidx.compose.material.icons.rounded.DirectionsCar
-import androidx.compose.material.icons.rounded.Fastfood
-import androidx.compose.material.icons.rounded.GridView
-import androidx.compose.material.icons.rounded.Home
-import androidx.compose.material.icons.rounded.LocalHospital
-import androidx.compose.material.icons.rounded.MenuBook
+import androidx.compose.material.icons.rounded.DirectionsBus
+import androidx.compose.material.icons.rounded.Favorite
+import androidx.compose.material.icons.rounded.MoreHoriz
+import androidx.compose.material.icons.rounded.MusicNote
+import androidx.compose.material.icons.rounded.Restaurant
+import androidx.compose.material.icons.rounded.School
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import com.example.financaspessoais1.ui.theme.*
 
+/**
+ * Categorias espelhando o objeto CATS do protótipo: id, nome, cor, fundo,
+ * teto (limite) e ícone. A ordem é a mesma usada nas listas do protótipo.
+ */
 enum class ExpenseCategory(
+    val id: String,
     val label: String,
     val color: Color,
+    val bgColor: Color,
+    val limit: Double,
     val icon: ImageVector
 ) {
-    ALIMENTACAO("Alimentação", Color(0xFFF97316), Icons.Rounded.Fastfood),
-    TRANSPORTE("Transporte",   Color(0xFF3B82F6), Icons.Rounded.DirectionsCar),
-    SAUDE("Saúde",             Color(0xFFEF4444), Icons.Rounded.LocalHospital),
-    LAZER("Lazer",             Color(0xFF8B5CF6), Icons.Rounded.Celebration),
-    EDUCACAO("Educação",       Color(0xFF14B8A6), Icons.Rounded.MenuBook),
-    MORADIA("Moradia",         Color(0xFFF59E0B), Icons.Rounded.Home),
-    OUTROS("Outros",           Color(0xFF6B7280), Icons.Rounded.GridView)
+    ALIMENTACAO("alimentacao", "Alimentação", CatAlimentacaoColor, CatAlimentacaoBg, 600.0, Icons.Rounded.Restaurant),
+    TRANSPORTE ("transporte",  "Transporte",  CatTransporteColor,  CatTransporteBg,  200.0, Icons.Rounded.DirectionsBus),
+    LAZER      ("lazer",       "Lazer",       CatLazerColor,       CatLazerBg,       300.0, Icons.Rounded.MusicNote),
+    SAUDE      ("saude",       "Saúde",       CatSaudeColor,       CatSaudeBg,       200.0, Icons.Rounded.Favorite),
+    EDUCACAO   ("educacao",    "Educação",    CatEducacaoColor,    CatEducacaoBg,    400.0, Icons.Rounded.School),
+    OUTROS     ("outros",      "Outros",      CatOutrosColor,      CatOutrosBg,      300.0, Icons.Rounded.MoreHoriz);
+
+    companion object {
+        fun fromId(id: String): ExpenseCategory = entries.firstOrNull { it.id == id } ?: OUTROS
+    }
 }
