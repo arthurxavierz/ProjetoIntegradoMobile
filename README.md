@@ -6,12 +6,10 @@ Repositório unificado desenvolvido para a disciplina de **Programação de Disp
 
 ## Integrantes
 
-| Aluno | App Responsável |
-|---|---|
 
-| Pedro Lopes | App 01 – Gestão de Finanças Pessoais |
-| Tiago Castro | App 02 – Gestão Acadêmica Integrada |
-| Arthur Xavier | App 03 – Ciclo de Estudos e Revisões |
+Pedro Lopes | App 01 – Gestão de Finanças Pessoais 
+Tiago Castro | App 02 – Gestão Acadêmica Integrada 
+Arthur Xavier | App 03 – Ciclo de Estudos e Revisões 
 
 ---
 
