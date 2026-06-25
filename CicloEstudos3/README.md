@@ -4,6 +4,9 @@ Aplicativo Android desenvolvido em **Kotlin** para gerenciamento de um diário d
 
 ---
 
+<img width="298" height="649" alt="image" src="https://github.com/user-attachments/assets/b5d817d3-40aa-48f4-bfe6-f1e233332627" />
+
+
 ## Funcionalidades
 
 - Cadastro de disciplinas e tópicos estudados
