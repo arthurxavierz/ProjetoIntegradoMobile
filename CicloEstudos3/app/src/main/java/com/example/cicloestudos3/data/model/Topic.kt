@@ -23,6 +23,7 @@ data class Topic(
     val title: String,
     val notes: String = "",
     val durationMinutes: Int,
+    val ownerEmail: String = "",
     val studiedAt: Long = System.currentTimeMillis()
 )
 

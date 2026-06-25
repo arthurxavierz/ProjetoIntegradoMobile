@@ -14,19 +14,29 @@ interface SubjectDao {
                COALESCE(SUM(t.durationMinutes), 0)  AS totalMinutes
         FROM subjects s
         LEFT JOIN topics t ON t.subjectId = s.id
+        WHERE s.ownerEmail = :owner
         GROUP BY s.id
         ORDER BY s.name ASC
     """)
-    fun getSubjectsWithStats(): Flow<List<SubjectWithStats>>
+    fun getSubjectsWithStats(owner: String): Flow<List<SubjectWithStats>>
 
-    @Query("SELECT * FROM subjects ORDER BY name ASC")
-    fun getAllSubjects(): Flow<List<Subject>>
+    @Query("SELECT * FROM subjects WHERE ownerEmail = :owner ORDER BY name ASC")
+    fun getAllSubjects(owner: String): Flow<List<Subject>>
 
     @Query("SELECT * FROM subjects WHERE id = :id LIMIT 1")
     suspend fun getById(id: Int): Subject?
 
+    @Query("SELECT * FROM subjects WHERE name = :name COLLATE NOCASE AND ownerEmail = :owner LIMIT 1")
+    suspend fun getByName(name: String, owner: String): Subject?
+
+    @Query("SELECT * FROM subjects WHERE name = :name COLLATE NOCASE AND ownerEmail = :owner AND id <> :excludeId LIMIT 1")
+    suspend fun getByNameExcluding(name: String, excludeId: Int, owner: String): Subject?
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(subject: Subject): Long
+
+    @Update
+    suspend fun update(subject: Subject)
 
     @Delete
     suspend fun delete(subject: Subject)

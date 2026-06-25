@@ -15,6 +15,7 @@ data class Revision(
     /** Epoch millis for scheduled date+time */
     val scheduledAt: Long,
     val isCompleted: Boolean = false,
+    val ownerEmail: String = "",
     /** UUID string of the WorkManager OneTimeWorkRequest */
     val workerRequestId: String = ""
 )
