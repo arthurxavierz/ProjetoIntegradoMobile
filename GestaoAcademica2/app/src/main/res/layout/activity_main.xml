@@ -1,10 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.fragment.app.FragmentContainerView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_host_fragment"
-    android:name="androidx.navigation.fragment.NavHostFragment"
+    android:id="@+id/rootLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:defaultNavHost="true"
-    app:navGraph="@navigation/nav_graph" />
+    android:background="@color/brand_green_50">
+
+    <LinearLayout
+        android:id="@+id/contentColumn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Host das abas -->
+        <FrameLayout
+            android:id="@+id/contentHost"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Bottom Nav -->
+        <LinearLayout
+            android:id="@+id/bottomNavBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/surface_white"
+            android:elevation="8dp">
+
+            <LinearLayout
+                android:id="@+id/navHoje"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/navHojeIcon"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_nav_hoje"
+                    android:importantForAccessibility="no" />
+
+                <TextView
+                    android:id="@+id/navHojeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/nav_hoje"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/dm_sans"
+                android:textFontWeight="700" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/navAgenda"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/navAgendaIcon"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_nav_agenda"
+                    android:importantForAccessibility="no" />
+
+                <TextView
+                    android:id="@+id/navAgendaText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/nav_agenda"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/dm_sans"
+                android:textFontWeight="500" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/navFav"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/navFavIcon"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_star"
+                    android:importantForAccessibility="no" />
+
+                <TextView
+                    android:id="@+id/navFavText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/nav_fav"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/dm_sans"
+                android:textFontWeight="500" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/navPerfil"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/navPerfilIcon"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_nav_perfil"
+                    android:importantForAccessibility="no" />
+
+                <TextView
+                    android:id="@+id/navPerfilText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/nav_perfil"
+                    android:textSize="10sp"
+                    android:fontFamily="@font/dm_sans"
+                android:textFontWeight="500" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- FAB -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="88dp"
+        android:src="@drawable/ic_add"
+        android:contentDescription="Adicionar evento"
+        app:backgroundTint="@color/brand_emerald"
+        app:tint="@color/white"
+        app:elevation="6dp"
+        app:fabCustomSize="56dp"
+        app:maxImageSize="26dp"
+        app:borderWidth="0dp" />
+
+    <!-- Overlay de login (elevação alta p/ ficar acima do FAB) -->
+    <FrameLayout
+        android:id="@+id/loginContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/brand_green_50"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="24dp">
+
+        <include
+            android:id="@+id/loginView"
+            layout="@layout/view_login" />
+    </FrameLayout>
+
+    <!-- Faixa verde escura sob a status bar (acima de tudo) -->
+    <View
+        android:id="@+id/statusBarBand"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="top"
+        android:background="@color/brand_green_800"
+        android:elevation="32dp" />
+</FrameLayout>

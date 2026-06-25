@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/eventCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/surface_white"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="3dp"
+    app:strokeWidth="0dp"
+    app:cardUseCompatPadding="true"
+    app:cardPreventCornerOverlap="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="top"
+            android:padding="14dp">
+
+            <FrameLayout
+                android:id="@+id/iconBg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_rounded_11">
+
+                <ImageView
+                    android:id="@+id/ivIcon"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:importantForAccessibility="no" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dm_sans"
+                android:textFontWeight="600"
+                    android:textSize="14sp"
+                    android:textColor="@color/brand_green_900"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    tools:text="Reunião de Projeto" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="4dp">
+
+                    <TextView
+                        android:id="@+id/tvType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dm_sans"
+                android:textFontWeight="600"
+                        android:textSize="11sp"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="2dp"
+                        android:background="@drawable/bg_type_pill"
+                        tools:text="Reunião" />
+
+                    <TextView
+                        android:id="@+id/tvMeta"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="6dp"
+                        android:fontFamily="@font/dm_sans"
+                        android:textSize="11sp"
+                        android:textColor="@color/text_muted"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        tools:text="27 Jun · 10:00" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/dm_sans"
+                    android:textSize="11sp"
+                    android:textColor="@color/text_muted"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    tools:text="Biblioteca" />
+            </LinearLayout>
+
+            <!-- Ação: favoritar (a edição abre tocando no card) -->
+            <ImageView
+                android:id="@+id/btnFav"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_star"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Favoritar" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewStripe"
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_rounded_2" />
+    </FrameLayout>
+</com.google.android.material.card.MaterialCardView>

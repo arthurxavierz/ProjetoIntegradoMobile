@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_drawer"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Alça -->
+        <View
+            android:layout_width="36dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_drawer_handle" />
+
+        <!-- Cabeçalho -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="14dp">
+
+            <TextView
+                android:id="@+id/tvDrawerTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/dm_sans"
+                android:textFontWeight="700"
+                android:textSize="18sp"
+                android:textColor="@color/brand_green_900"
+                tools:text="Novo Evento" />
+
+            <FrameLayout
+                android:id="@+id/btnClose"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/bg_circle_track">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_close"
+                    app:tint="@color/icon_slate"
+                    android:contentDescription="Fechar" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Campos -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="18dp">
+
+            <!-- Nome -->
+            <TextView
+                style="@style/FormLabel"
+                android:text="@string/field_name" />
+
+            <EditText
+                android:id="@+id/etName"
+                style="@style/FormInput"
+                android:hint="@string/field_name_hint"
+                android:inputType="textCapSentences"
+                android:autofillHints="name" />
+
+            <!-- Tipo -->
+            <TextView
+                style="@style/FormLabel"
+                android:layout_marginTop="14dp"
+                android:text="@string/field_type" />
+
+            <AutoCompleteTextView
+                android:id="@+id/spType"
+                style="@style/FormInput"
+                android:focusable="false"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:inputType="none"
+                android:drawableEnd="@drawable/ic_chevron_down"
+                tools:text="Prova" />
+
+            <!-- Data + Horário -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="14dp"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/FormLabel"
+                        android:text="@string/field_date" />
+
+                    <EditText
+                        android:id="@+id/etDate"
+                        style="@style/FormInput"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:cursorVisible="false"
+                        android:inputType="none"
+                        tools:text="24/06/2025" />
+                </LinearLayout>
+
+                <Space android:layout_width="12dp" android:layout_height="0dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/FormLabel"
+                        android:text="@string/field_time" />
+
+                    <EditText
+                        android:id="@+id/etTime"
+                        style="@style/FormInput"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:cursorVisible="false"
+                        android:inputType="none"
+                        tools:text="10:00" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Local -->
+            <TextView
+                style="@style/FormLabel"
+                android:layout_marginTop="14dp"
+                android:text="@string/field_location" />
+
+            <EditText
+                android:id="@+id/etLocation"
+                style="@style/FormInput"
+                android:hint="@string/field_location_hint"
+                android:inputType="textCapSentences"
+                android:autofillHints="postalAddress" />
+
+            <TextView
+                android:id="@+id/tvError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans"
+                android:textFontWeight="500"
+                android:textSize="13sp"
+                android:textColor="@color/danger_red"
+                android:layout_marginTop="14dp"
+                android:visibility="gone"
+                tools:text="Nome é obrigatório." />
+        </LinearLayout>
+
+        <!-- Ações -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="32dp">
+
+            <TextView
+                android:id="@+id/btnDelete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:gravity="center"
+                android:paddingVertical="14dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_btn_danger"
+                android:fontFamily="@font/dm_sans"
+                android:textFontWeight="600"
+                android:textSize="14sp"
+                android:textColor="@color/danger_red"
+                android:text="@string/btn_delete"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingVertical="14dp"
+                android:background="@drawable/bg_btn_primary"
+                android:fontFamily="@font/dm_sans"
+                android:textFontWeight="600"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:text="@string/btn_add_event"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

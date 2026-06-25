@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Rótulo de campo de formulário (13sp, semibold, cinza) -->
+    <style name="FormLabel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/dm_sans</item>
+        <item name="android:textFontWeight">600</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/text_label</item>
+        <item name="android:layout_marginBottom">6dp</item>
+    </style>
+
+    <!-- Campo de entrada arredondado com borda -->
+    <style name="FormInput">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_input</item>
+        <item name="android:paddingHorizontal">14dp</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:fontFamily">@font/dm_sans</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/brand_green_900</item>
+        <item name="android:textColorHint">@color/text_muted</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+</resources>

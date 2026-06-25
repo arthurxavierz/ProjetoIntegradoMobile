@@ -1,21 +1,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-
-    <style name="Base.Theme.GestaoAcademica2" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">#7986CB</item>
-        <item name="colorOnPrimary">#1A237E</item>
-        <item name="colorPrimaryContainer">#283593</item>
-        <item name="colorOnPrimaryContainer">#C5CAE9</item>
-        <item name="colorSecondary">#80CBC4</item>
-        <item name="colorOnSecondary">#004D40</item>
-        <item name="colorSecondaryContainer">#004D40</item>
-        <item name="colorSurface">#1E1F2E</item>
-        <item name="colorSurfaceVariant">#2C2D3F</item>
-        <item name="colorOnSurface">#E6E1EC</item>
-        <item name="colorOnSurfaceVariant">#CAC4D0</item>
-        <item name="android:colorBackground">#12131E</item>
-        <item name="android:statusBarColor" tools:targetApi="21">#12131E</item>
+    <!-- O app é light-only (igual ao protótipo); o modo noturno espelha o tema claro. -->
+    <style name="Base.Theme.GestaoAcademica2" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/brand_emerald</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/brand_emerald_100</item>
+        <item name="colorOnPrimaryContainer">@color/brand_green_900</item>
+        <item name="colorSecondary">@color/brand_emerald_600</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSurface">@color/surface_white</item>
+        <item name="colorOnSurface">@color/brand_green_900</item>
+        <item name="colorOnSurfaceVariant">@color/text_muted</item>
+        <item name="android:colorBackground">@color/brand_green_50</item>
+        <item name="colorError">@color/danger_red</item>
+        <item name="elevationOverlayEnabled">false</item>
+        <item name="elevationOverlayColor">@android:color/transparent</item>
+        <item name="android:fontFamily">@font/dm_sans_regular</item>
+        <item name="fontFamily">@font/dm_sans_regular</item>
+        <item name="android:statusBarColor" tools:targetApi="21">@color/brand_green_800</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">false</item>
     </style>
-
     <style name="Theme.GestaoAcademica2" parent="Base.Theme.GestaoAcademica2" />
-
 </resources>

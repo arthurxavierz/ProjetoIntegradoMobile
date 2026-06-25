@@ -1,50 +1,69 @@
 <resources>
     <string name="app_name">Gestão Acadêmica</string>
 
-    <!-- Home -->
-    <string name="title_home">Agenda Acadêmica</string>
-    <string name="filter_all">Todos</string>
-    <string name="filter_favorites">Favoritos</string>
-    <string name="hint_search">Buscar eventos…</string>
-    <string name="empty_title">Nenhum evento encontrado</string>
-    <string name="empty_subtitle">Toque em + para adicionar um novo evento</string>
+    <!-- Login -->
+    <string name="login_title">Agenda Acadêmica</string>
+    <string name="login_subtitle">Organize sua vida universitária</string>
+    <string name="login_subtitle_register">Crie sua conta para começar</string>
+    <string name="login_name">Nome</string>
+    <string name="login_name_hint">Seu nome</string>
+    <string name="login_confirm">Confirmar senha</string>
+    <string name="login_have_account">Já tenho conta</string>
+    <string name="login_email">E-mail</string>
+    <string name="login_email_hint">seu@email.com</string>
+    <string name="login_password">Senha</string>
+    <string name="login_password_hint">••••••••</string>
+    <string name="login_forgot">Esqueceu a senha?</string>
+    <string name="login_enter">Entrar</string>
+    <string name="login_or">ou</string>
+    <string name="login_create">Criar conta</string>
+    <string name="login_err_email">Informe um e-mail válido.</string>
+    <string name="login_err_pass">Senha deve ter ao menos 6 caracteres.</string>
 
-    <!-- Add / Edit -->
-    <string name="title_new_event">Novo Evento</string>
-    <string name="title_edit_event">Editar Evento</string>
-    <string name="label_title">Título *</string>
-    <string name="label_subject">Disciplina</string>
-    <string name="label_category">Categoria *</string>
-    <string name="label_priority">Prioridade</string>
-    <string name="label_date">Data do Evento *</string>
-    <string name="label_location">Local (opcional)</string>
-    <string name="label_description">Descrição (opcional)</string>
-    <string name="btn_save">Salvar Evento</string>
-    <string name="btn_select_date">Selecionar Data</string>
-    <string name="error_title_empty">Informe o título do evento</string>
-    <string name="error_category_empty">Selecione uma categoria</string>
-    <string name="error_date_empty">Selecione a data do evento</string>
+    <!-- Nav -->
+    <string name="nav_hoje">Hoje</string>
+    <string name="nav_agenda">Agenda</string>
+    <string name="nav_fav">Favoritos</string>
+    <string name="nav_perfil">Perfil</string>
 
-    <!-- Detail -->
-    <string name="title_detail">Detalhes</string>
-    <string name="action_edit">Editar</string>
-    <string name="action_delete">Excluir</string>
-    <string name="btn_favorite_add">Adicionar aos favoritos</string>
-    <string name="btn_favorite_remove">Remover dos favoritos</string>
-    <string name="btn_complete">Marcar como concluído</string>
-    <string name="btn_uncomplete">Desmarcar conclusão</string>
-    <string name="badge_completed">Concluído</string>
-    <string name="confirm_delete">Excluir este evento?</string>
-    <string name="confirm_delete_msg">Esta ação não pode ser desfeita.</string>
-    <string name="btn_confirm">Excluir</string>
-    <string name="btn_cancel">Cancelar</string>
+    <!-- Hoje -->
+    <string name="greeting">Olá, João</string>
+    <string name="greeting_user">Olá, %1$s</string>
+    <string name="stat_today">Hoje</string>
+    <string name="stat_upcoming">Próximos</string>
+    <string name="stat_fav">Favoritos</string>
+    <string name="section_today">Hoje</string>
+    <string name="section_upcoming">Próximos Dias</string>
+    <string name="empty_today">Nenhum evento hoje</string>
 
-    <!-- Labels detail -->
-    <string name="label_detail_date">Data</string>
-    <string name="label_detail_category">Categoria</string>
-    <string name="label_detail_priority">Prioridade</string>
-    <string name="label_detail_subject">Disciplina</string>
-    <string name="label_detail_location">Local</string>
-    <string name="label_detail_description">Descrição</string>
-    <string name="no_info">Não informado</string>
+    <!-- Favoritos -->
+    <string name="fav_title">Favoritos</string>
+    <string name="fav_empty_title">Nenhum favorito</string>
+    <string name="fav_empty_sub">Toque na estrela para salvar eventos importantes.</string>
+
+    <!-- Perfil -->
+    <string name="profile_name">João Silva</string>
+    <string name="profile_email">joao.silva@email.com</string>
+    <string name="profile_course_period">Engenharia de Software · 4° período</string>
+    <string name="profile_events">Eventos</string>
+    <string name="profile_course_label">Curso</string>
+    <string name="profile_course_value">Engenharia de Software</string>
+    <string name="profile_semester_label">Semestre</string>
+    <string name="profile_semester_value">2025/1</string>
+    <string name="profile_logout">Sair da Conta</string>
+
+    <!-- Drawer add/edit -->
+    <string name="drawer_new">Novo Evento</string>
+    <string name="drawer_edit">Editar Evento</string>
+    <string name="field_name">Nome do evento *</string>
+    <string name="field_name_hint">Ex: Prova de Cálculo…</string>
+    <string name="field_type">Tipo</string>
+    <string name="field_date">Data</string>
+    <string name="field_time">Horário</string>
+    <string name="field_location">Local</string>
+    <string name="field_location_hint">Ex: Sala 201, Online…</string>
+    <string name="btn_add_event">Adicionar Evento</string>
+    <string name="btn_save_changes">Salvar Alterações</string>
+    <string name="btn_delete">Excluir</string>
+    <string name="err_name_required">Nome é obrigatório.</string>
 </resources>

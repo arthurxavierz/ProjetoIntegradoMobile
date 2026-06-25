@@ -6,11 +6,13 @@ import kotlinx.coroutines.flow.Flow
 
 class EventRepository(private val dao: EventDao) {
 
-    val allEvents: Flow<List<AcademicEvent>> = dao.getAllEvents()
+    /** Fluxo dos eventos de um usuário específico. */
+    fun events(owner: String): Flow<List<AcademicEvent>> = dao.getAllEvents(owner)
 
-    suspend fun upsert(event: AcademicEvent)                   = dao.upsert(event)
-    suspend fun delete(event: AcademicEvent)                   = dao.delete(event)
-    suspend fun getById(id: Int): AcademicEvent?               = dao.getById(id)
-    suspend fun setFavorite(id: Int, isFavorite: Boolean)      = dao.setFavorite(id, isFavorite)
-    suspend fun setCompleted(id: Int, isCompleted: Boolean)    = dao.setCompleted(id, isCompleted)
+    suspend fun insert(event: AcademicEvent): Long          = dao.insert(event)
+    suspend fun update(event: AcademicEvent)                = dao.update(event)
+    suspend fun delete(event: AcademicEvent)                = dao.delete(event)
+    suspend fun deleteById(id: Long)                        = dao.deleteById(id)
+    suspend fun getById(id: Long): AcademicEvent?           = dao.getById(id)
+    suspend fun setFavorite(id: Long, isFavorite: Boolean)  = dao.setFavorite(id, isFavorite)
 }

@@ -7,21 +7,25 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface EventDao {
 
-    @Query("SELECT * FROM events ORDER BY date ASC")
-    fun getAllEvents(): Flow<List<AcademicEvent>>
+    /** Eventos do usuário (escopo por e-mail) — cada conta vê só os seus. */
+    @Query("SELECT * FROM events WHERE ownerEmail = :owner ORDER BY date ASC, time ASC")
+    fun getAllEvents(owner: String): Flow<List<AcademicEvent>>
 
     @Query("SELECT * FROM events WHERE id = :id LIMIT 1")
-    suspend fun getById(id: Int): AcademicEvent?
+    suspend fun getById(id: Long): AcademicEvent?
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun upsert(event: AcademicEvent)
+    suspend fun insert(event: AcademicEvent): Long
+
+    @Update
+    suspend fun update(event: AcademicEvent)
 
     @Delete
     suspend fun delete(event: AcademicEvent)
 
-    @Query("UPDATE events SET isFavorite = :isFavorite WHERE id = :id")
-    suspend fun setFavorite(id: Int, isFavorite: Boolean)
+    @Query("DELETE FROM events WHERE id = :id")
+    suspend fun deleteById(id: Long)
 
-    @Query("UPDATE events SET isCompleted = :isCompleted WHERE id = :id")
-    suspend fun setCompleted(id: Int, isCompleted: Boolean)
+    @Query("UPDATE events SET isFavorite = :isFavorite WHERE id = :id")
+    suspend fun setFavorite(id: Long, isFavorite: Boolean)
 }

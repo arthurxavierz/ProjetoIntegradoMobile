@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brand_green_50"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="52dp"
+        android:paddingHorizontal="32dp"
+        android:paddingBottom="40dp">
+
+        <!-- Logo -->
+        <FrameLayout
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:background="@drawable/bg_logo_gradient"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_school"
+                app:tint="@color/white"
+                android:importantForAccessibility="no" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_title"
+            android:fontFamily="@font/dm_sans"
+                android:textFontWeight="700"
+            android:textSize="26sp"
+            android:textColor="@color/brand_green_900" />
+
+        <TextView
+            android:id="@+id/tvLoginSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_subtitle"
+            android:fontFamily="@font/dm_sans"
+                android:textFontWeight="500"
+            android:textSize="14sp"
+            android:textColor="@color/text_muted"
+            android:gravity="center"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="36dp" />
+
+        <!-- Nome (somente cadastro) -->
+        <LinearLayout
+            android:id="@+id/layoutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login_name"
+                android:fontFamily="@font/dm_sans"
+                android:textFontWeight="600"
+                android:textSize="13sp"
+                android:textColor="@color/text_label"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_input_login"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="14dp"
+                android:hint="@string/login_name_hint"
+                android:textColorHint="@color/text_muted"
+                android:inputType="textPersonName"
+                android:fontFamily="@font/dm_sans"
+                android:textSize="14sp"
+                android:textColor="@color/brand_green_900"
+                android:autofillHints="name"
+                android:layout_marginBottom="14dp" />
+        </LinearLayout>
+
+        <!-- E-mail -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login_email"
+            android:fontFamily="@font/dm_sans"
+                android:textFontWeight="600"
+            android:textSize="13sp"
+            android:textColor="@color/text_label"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_input_login"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="14dp"
+            android:hint="@string/login_email_hint"
+            android:textColorHint="@color/text_muted"
+            android:inputType="textEmailAddress"
+            android:fontFamily="@font/dm_sans"
+            android:textSize="14sp"
+            android:textColor="@color/brand_green_900"
+            android:autofillHints="emailAddress" />
+
+        <!-- Senha -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login_password"
+            android:fontFamily="@font/dm_sans"
+                android:textFontWeight="600"
+            android:textSize="13sp"
+            android:textColor="@color/text_label"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_input_login"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="14dp"
+            android:hint="@string/login_password_hint"
+            android:textColorHint="@color/text_muted"
+            android:inputType="textPassword"
+            android:fontFamily="@font/dm_sans"
+            android:textSize="14sp"
+            android:textColor="@color/brand_green_900"
+            android:autofillHints="password" />
+
+        <!-- Confirmar senha (somente cadastro) -->
+        <LinearLayout
+            android:id="@+id/layoutConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login_confirm"
+                android:fontFamily="@font/dm_sans"
+                android:textFontWeight="600"
+                android:textSize="13sp"
+                android:textColor="@color/text_label"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:id="@+id/etConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_input_login"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="14dp"
+                android:hint="@string/login_password_hint"
+                android:textColorHint="@color/text_muted"
+                android:inputType="textPassword"
+                android:fontFamily="@font/dm_sans"
+                android:textSize="14sp"
+                android:textColor="@color/brand_green_900"
+                android:autofillHints="password" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvForgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/login_forgot"
+            android:fontFamily="@font/dm_sans"
+                android:textFontWeight="600"
+            android:textSize="13sp"
+            android:textColor="@color/brand_emerald"
+            android:layout_marginTop="14dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="2dp" />
+
+        <TextView
+            android:id="@+id/tvLoginError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dm_sans"
+                android:textFontWeight="500"
+            android:textSize="13sp"
+            android:textColor="@color/danger_red"
+            android:gravity="center"
+            android:layout_marginTop="14dp"
+            android:visibility="gone"
+            tools:text="Informe um e-mail válido." />
+
+        <TextView
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login_enter"
+            android:gravity="center"
+            android:paddingVertical="16dp"
+            android:background="@drawable/bg_btn_primary_14"
+            android:fontFamily="@font/dm_sans"
+                android:textFontWeight="700"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Divisor "ou" -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="14dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/border_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_or"
+                android:fontFamily="@font/dm_sans"
+                android:textFontWeight="500"
+                android:textSize="12sp"
+                android:textColor="@color/text_muted"
+                android:layout_marginHorizontal="12dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/border_gray" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnToggleMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login_create"
+            android:gravity="center"
+            android:paddingVertical="15dp"
+            android:background="@drawable/bg_btn_outline"
+            android:fontFamily="@font/dm_sans"
+                android:textFontWeight="600"
+            android:textSize="15sp"
+            android:textColor="@color/text_label"
+            android:layout_marginTop="14dp"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+</ScrollView>

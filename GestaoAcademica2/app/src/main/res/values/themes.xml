@@ -1,22 +1,47 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Base.Theme.GestaoAcademica2" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorOnPrimary">@color/colorOnPrimary</item>
-        <item name="colorPrimaryContainer">@color/colorPrimaryContainer</item>
-        <item name="colorOnPrimaryContainer">@color/colorOnPrimaryContainer</item>
-        <item name="colorSecondary">@color/colorSecondary</item>
-        <item name="colorOnSecondary">@color/colorOnSecondary</item>
-        <item name="colorSecondaryContainer">@color/colorSecondaryContainer</item>
-        <item name="colorSurface">@color/colorSurface</item>
-        <item name="colorSurfaceVariant">@color/colorSurfaceVariant</item>
-        <item name="colorOnSurface">@color/colorOnSurface</item>
-        <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant</item>
-        <item name="android:colorBackground">@color/colorBackground</item>
-        <item name="colorError">@color/colorError</item>
-        <item name="android:statusBarColor" tools:targetApi="21">@color/colorPrimaryDark</item>
+    <style name="Base.Theme.GestaoAcademica2" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/brand_emerald</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/brand_emerald_100</item>
+        <item name="colorOnPrimaryContainer">@color/brand_green_900</item>
+        <item name="colorSecondary">@color/brand_emerald_600</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSurface">@color/surface_white</item>
+        <item name="colorOnSurface">@color/brand_green_900</item>
+        <item name="colorOnSurfaceVariant">@color/text_muted</item>
+        <item name="android:colorBackground">@color/brand_green_50</item>
+        <item name="colorError">@color/danger_red</item>
+
+        <!-- Cards brancos de verdade: desliga o tint de elevação do Material 3 -->
+        <item name="elevationOverlayEnabled">false</item>
+        <item name="elevationOverlayColor">@android:color/transparent</item>
+
+        <!-- Fonte padrão DM Sans (regular). Pesos específicos vêm por view via
+             android:textFontWeight, evitando colisão de cache da família. -->
+        <item name="android:fontFamily">@font/dm_sans_regular</item>
+        <item name="fontFamily">@font/dm_sans_regular</item>
+
+        <!-- Status bar verde escuro com ícones claros -->
+        <item name="android:statusBarColor" tools:targetApi="21">@color/brand_green_800</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">false</item>
     </style>
 
     <style name="Theme.GestaoAcademica2" parent="Base.Theme.GestaoAcademica2" />
+
+    <!-- BottomSheet sem fundo (usamos o nosso próprio container arredondado) -->
+    <style name="ThemeOverlay.GestaoAcademica2.BottomSheet" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.GestaoAcademica2.BottomSheet</item>
+        <item name="android:fontFamily">@font/dm_sans</item>
+        <item name="fontFamily">@font/dm_sans</item>
+    </style>
+
+    <style name="Widget.GestaoAcademica2.BottomSheet" parent="Widget.Material3.BottomSheet">
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <!-- Não insetar o fundo do sheet: o branco vai até a borda (sem vão de gestos);
+             o inset vai para o conteúdo interno via código. -->
+        <item name="paddingBottomSystemWindowInsets">false</item>
+    </style>
 
 </resources>

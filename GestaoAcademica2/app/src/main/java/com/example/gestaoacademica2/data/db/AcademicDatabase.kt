@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.example.gestaoacademica2.data.model.AcademicEvent
 
-@Database(entities = [AcademicEvent::class], version = 1, exportSchema = false)
+@Database(entities = [AcademicEvent::class], version = 3, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class AcademicDatabase : RoomDatabase() {
 
@@ -22,7 +22,10 @@ abstract class AcademicDatabase : RoomDatabase() {
                     context.applicationContext,
                     AcademicDatabase::class.java,
                     "academic_database"
-                ).build().also { INSTANCE = it }
+                )
+                    .fallbackToDestructiveMigration(false)
+                    .build()
+                    .also { INSTANCE = it }
             }
     }
 }

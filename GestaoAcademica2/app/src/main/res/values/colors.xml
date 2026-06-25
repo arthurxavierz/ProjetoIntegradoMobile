@@ -1,55 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Primary — Indigo acadêmico -->
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#1A237E</color>
-    <color name="colorPrimaryLight">#7986CB</color>
-    <color name="colorPrimaryContainer">#E8EAF6</color>
-    <color name="colorOnPrimary">#FFFFFF</color>
-    <color name="colorOnPrimaryContainer">#1A237E</color>
+    <!-- ── Marca / superfícies (paleta verde do protótipo) ── -->
+    <color name="brand_emerald">#10B981</color>        <!-- primary / accent -->
+    <color name="brand_emerald_600">#059669</color>
+    <color name="brand_green_900">#064E3B</color>       <!-- títulos -->
+    <color name="brand_green_800">#065F46</color>       <!-- status bar / gradiente -->
+    <color name="brand_emerald_300">#6EE7B7</color>     <!-- label "HOJE" -->
+    <color name="brand_emerald_100">#D1FAE5</color>
+    <color name="brand_emerald_50">#ECFDF5</color>
+    <color name="brand_green_50">#F0FDF4</color>        <!-- background -->
+    <color name="brand_emerald_200">#A7F3D0</color>
 
-    <!-- Secondary — Teal -->
-    <color name="colorSecondary">#26A69A</color>
-    <color name="colorSecondaryContainer">#E0F2F1</color>
-    <color name="colorOnSecondary">#FFFFFF</color>
+    <!-- ── Neutros ── -->
+    <color name="surface_white">#FFFFFF</color>
+    <color name="text_muted">#94A3B8</color>           <!-- slate-400 -->
+    <color name="text_label">#374151</color>           <!-- labels de form -->
+    <color name="text_gray">#6B7280</color>            <!-- texto de chip -->
+    <color name="icon_slate">#64748B</color>
+    <color name="border_gray">#E5E7EB</color>
+    <color name="chip_track">#F1F5F9</color>
+    <color name="divider_slate">#E2E8F0</color>
+    <color name="chevron_slate">#CBD5E1</color>
+    <color name="scrim">#7F0F172A</color>              <!-- rgba(15,23,42,.5) -->
 
-    <!-- Superfícies -->
-    <color name="colorBackground">#F5F6FD</color>
-    <color name="colorSurface">#FFFFFF</color>
-    <color name="colorSurfaceVariant">#ECEEF8</color>
-    <color name="colorOnBackground">#1C1B2E</color>
-    <color name="colorOnSurface">#1C1B2E</color>
-    <color name="colorOnSurfaceVariant">#5C5F7A</color>
-    <color name="colorError">#B00020</color>
+    <!-- ── Estados ── -->
+    <color name="star_amber">#F59E0B</color>
+    <color name="danger_red">#EF4444</color>
+    <color name="danger_red_bg">#FEF2F2</color>
 
-    <!-- Status -->
-    <color name="status_green">#2E7D32</color>
-    <color name="status_amber">#F57F17</color>
-    <color name="status_red">#C62828</color>
-    <color name="amber">#FFA000</color>
-    <color name="amber_light">#FFF8E1</color>
+    <!-- ── Tipos de evento ── -->
+    <color name="type_prova">#DC2626</color>
+    <color name="type_prova_bg">#FEF2F2</color>
+    <color name="type_trabalho">#2563EB</color>
+    <color name="type_trabalho_bg">#EFF6FF</color>
+    <color name="type_palestra">#7C3AED</color>
+    <color name="type_palestra_bg">#F5F3FF</color>
+    <color name="type_reuniao">#D97706</color>
+    <color name="type_reuniao_bg">#FFFBEB</color>
+    <color name="type_atividade">#059669</color>
+    <color name="type_atividade_bg">#ECFDF5</color>
 
-    <!-- Prioridade -->
-    <color name="priority_high">#D32F2F</color>
-    <color name="priority_high_container">#FFCDD2</color>
-    <color name="priority_medium">#F57F17</color>
-    <color name="priority_medium_container">#FFF3E0</color>
-    <color name="priority_low">#2E7D32</color>
-    <color name="priority_low_container">#E8F5E9</color>
-
-    <!-- Categorias -->
-    <color name="cat_prova">#C62828</color>
-    <color name="cat_prova_container">#FFCDD2</color>
-    <color name="cat_trabalho">#1565C0</color>
-    <color name="cat_trabalho_container">#BBDEFB</color>
-    <color name="cat_palestra">#6A1B9A</color>
-    <color name="cat_palestra_container">#E1BEE7</color>
-    <color name="cat_aula">#00695C</color>
-    <color name="cat_aula_container">#B2DFDB</color>
-    <color name="cat_outro">#455A64</color>
-    <color name="cat_outro_container">#ECEFF1</color>
-
-    <!-- White / Black -->
     <color name="white">#FFFFFFFF</color>
     <color name="black">#FF000000</color>
 </resources>
