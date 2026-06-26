@@ -28,6 +28,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.example.financaspessoais1.model.Expense
 import com.example.financaspessoais1.model.ExpenseCategory
+import com.example.financaspessoais1.model.FinanceCalculations
 import com.example.financaspessoais1.ui.theme.*
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -57,9 +58,14 @@ fun DashboardScreen(
     onDeleteExpense: (Int) -> Unit,
     onResetBudget: () -> Unit
 ) {
-    val spent     = expenses.sumOf { it.value }
-    val remaining = budget - spent
-    val progress  = if (budget > 0) (spent / budget).coerceIn(0.0, 1.0).toFloat() else 0f
+    // Cálculos centralizados na função pura (testável por JUnit).
+    val summary   = remember(budget, expenses) { FinanceCalculations.summarize(budget, expenses) }
+    val spent     = summary.spent
+    val remaining = summary.remaining
+    val progress  = summary.progress
+
+    // Lançamento aguardando confirmação de remoção (null = nenhum diálogo aberto).
+    var expenseToDelete by remember { mutableStateOf<Expense?>(null) }
 
     val animatedProgress by animateFloatAsState(
         targetValue   = progress,
@@ -188,11 +194,40 @@ fun DashboardScreen(
                     items = expenses.sortedByDescending { it.timestamp },
                     key   = { it.id }
                 ) { expense ->
-                    ExpenseItem(expense = expense, onDelete = { onDeleteExpense(expense.id) })
+                    ExpenseItem(expense = expense, onDelete = { expenseToDelete = expense })
                     Spacer(Modifier.height(8.dp))
                 }
             }
         }
+    }
+
+    // ── Diálogo de confirmação de remoção ────────────────────────────────────
+    expenseToDelete?.let { target ->
+        AlertDialog(
+            onDismissRequest = { expenseToDelete = null },
+            icon  = { Icon(Icons.Rounded.Delete, contentDescription = null, tint = AccentRed) },
+            title = { Text("Remover lançamento?") },
+            text  = {
+                Text(
+                    "Deseja remover \"${target.name}\" no valor de " +
+                            "${target.value.toCurrency()}? Esta ação não pode ser desfeita."
+                )
+            },
+            confirmButton = {
+                TextButton(onClick = {
+                    onDeleteExpense(target.id)
+                    expenseToDelete = null
+                }) {
+                    Text("Remover", color = AccentRed, fontWeight = FontWeight.SemiBold)
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { expenseToDelete = null }) {
+                    Text("Cancelar", color = TextSecondary)
+                }
+            },
+            containerColor = SurfaceWhite
+        )
     }
 }
 
